@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Bearcat Hackers demo</title>
+        
+        <style>
+            
+            .myDiv {
+                width: 200px;
+                height: 200px;
+                background-color: skyblue;
+                border: 2px solid black;
+                border-radius: 15px;
+                padding: 5px;
+                margin: 20px;
+                text-align: center;
+                display: inline-block;
+            }
+            
+            .myClass {
+                color: red;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .mySecondClass {
+                color: olivedrab;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        <div class="myDiv">
+            <p class="myClass">This is some text inside a paragraph tag</p>
+            <p class="mySecondClass">This is some more text</p>
+        </div>
+        
+        <button id="myButton" onclick="toggleOneByOne()">Toggle Button</button>
+        
+        <script>
+            function toggleBoxes() {
+                var classes = document.getElementsByClassName("myDiv");
+                
+                for (var i = 0; i < classes.length; i++) {
+                    if (classes[i].style.visibility = "hidden") {
+                        classes[i].style.visibility = "visible";
+                    }
+                    else {
+                        classes[i].style.visibility = "hidden";
+                    }
+                    
+                }
+            }
+            
+            // Hiding one by one, not removing
+            function toggleOneByOne() {
+                var classArray = document.getElementsByClassName("myDiv");
+                var i = 0;
+                
+                var myTimer = setInterval(function() {
+                    
+                    // clears all further timers, the remainder of the code still executes
+                    if (i >= classArray.length - 1) clearInterval(myTimer);
+                    
+                    if (classArray[i].style.visibility == "hidden") {
+                        classArray[i].style.visibility = "visible";
+                    }
+                    else {
+                        classArray[i].style.visibility = "hidden";
+                    }
+                    i++;
+                }, 500);
+                
+            }
+        </script>
+        
+    </body>
+</html>
